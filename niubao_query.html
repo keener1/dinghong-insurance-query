@@ -72,31 +72,39 @@ body {
 
 /* 通知栏 */
 .notification-bar {
-  background: #fff8e1;
-  border-bottom: 1px solid #ffe082;
   padding: 10px 16px;
   display: none;
   position: sticky;
   top: 56px;
   z-index: 99;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s;
 }
 .notification-bar.show { display: block; }
+.notification-bar.no-changes {
+  background: #e8f5e9;
+  border-bottom-color: #c8e6c9;
+}
+.notification-bar.has-changes {
+  background: #fff8e1;
+  border-bottom-color: #ffe082;
+}
 .notif-summary {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #f57f17;
-  font-weight: 500;
   cursor: pointer;
 }
+.no-changes .notif-summary { color: #2e7d32; font-weight: 500; }
+.has-changes .notif-summary { color: #f57f17; font-weight: 500; }
 .notif-dot {
   width: 8px; height: 8px;
-  background: #d32f2f;
   border-radius: 50%;
   flex-shrink: 0;
-  animation: pulse 2s infinite;
 }
+.notif-dot.red { background: #d32f2f; animation: pulse 2s infinite; }
+.notif-dot.green { background: #2e7d32; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 .notif-toggle {
   font-size: 11px;
@@ -133,10 +141,10 @@ body {
 .search-wrap {
   padding: 12px 16px;
   position: sticky;
+  top: 106px;
   z-index: 98;
   background: #f5f6fa;
 }
-.notification-bar.show ~ .search-wrap { top: 106px; }
 .search-box {
   display: flex; align-items: center; background: #fff; border-radius: 10px;
   padding: 0 14px; height: 44px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -262,9 +270,9 @@ body {
 <!-- 通知栏 -->
 <div class="notification-bar" id="notifBar">
   <div class="notif-summary" id="notifSummary" onclick="toggleNotifDetail()">
-    <div class="notif-dot"></div>
-    <span id="notifTitle">今日有变更通知</span>
-    <span class="notif-toggle" id="notifToggle">展开详情 ▼</span>
+    <div class="notif-dot green" id="notifDot"></div>
+    <span id="notifTitle">数据状态</span>
+    <span class="notif-toggle" id="notifToggle" style="display:none;">展开详情 ▼</span>
   </div>
   <div class="notif-detail" id="notifDetail"></div>
 </div>
@@ -358,20 +366,33 @@ function toggleNotifDetail() {
 }
 
 function renderNotification(changes) {
-  if (!changes || !changes.has_changes) return;
-  changesData = changes;
   const bar = document.getElementById('notifBar');
   const title = document.getElementById('notifTitle');
   const detail = document.getElementById('notifDetail');
+  const dot = document.getElementById('notifDot');
+  const toggle = document.getElementById('notifToggle');
 
-  // 标题摘要
+  if (!changes || !changes.has_changes) {
+    // 无变动
+    bar.className = 'notification-bar show no-changes';
+    dot.className = 'notif-dot green';
+    title.textContent = changes ? `${changes.date || ''} 数据已更新，无变动` : '暂无变更数据';
+    toggle.style.display = 'none';
+    detail.innerHTML = '';
+    return;
+  }
+
+  // 有变动
+  bar.className = 'notification-bar show has-changes';
+  dot.className = 'notif-dot red';
+  toggle.style.display = '';
+
   const parts = [];
   if (changes.delisted_count > 0) parts.push(`下架${changes.delisted_count}款`);
   if (changes.new_count > 0) parts.push(`上架${changes.new_count}款`);
   if (changes.fee_change_count > 0) parts.push(`费用变动${changes.fee_change_count}款`);
-  title.textContent = `今日更新：${parts.join('，')}`;
+  title.textContent = `${changes.date || '今日'}更新：${parts.join('，')}`;
 
-  // 详情
   let html = '';
   if (changes.new_products && changes.new_products.length > 0) {
     html += '<div style="font-weight:600;color:#2e7d32;margin-bottom:4px;">📦 新上架产品</div>';
@@ -395,7 +416,7 @@ function renderNotification(changes) {
     });
   }
   detail.innerHTML = html;
-  bar.classList.add('show');
+  toggle.textContent = '展开详情 ▼';
 }
 
 // ===== 数据查询 =====
