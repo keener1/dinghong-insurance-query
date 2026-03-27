@@ -3,7 +3,7 @@
 鼎鸿保险经纪费用查询 - 全自动更新脚本
 流程：浏览器登录牛保100 → 导出商品推广费 → 等待导出 → 下载Excel → 生成JSON → 复制index.html → git推送
 """
-import sys, os, codecs, json, glob, time, shutil
+import sys, os, codecs, json, glob, time, shutil, calendar
 if os.name == 'nt':
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
 
@@ -44,14 +44,16 @@ def step2_export_data():
     print("[2/7] 浏览器自动化：登录牛保100并导出数据...")
     
     now = datetime.now()
-    year = now.year
     month = now.month
+    today = now.day
     
     task = (
         f"登录牛保100保险平台，账号13376413472密码Dhtx123456@，"
         f"登录成功后进入商品库页面，"
         f"在查询按钮右边找到'导出商品推广费'按钮并点击，"
-        f"在弹出窗口中选择{year}年{month}月的时间范围并导出，"
+        f"弹窗中有一个日历控件，只能选单天日期，月份不用选只需要在日历上点日期数字。"
+        f"选择{month}月{today}号，即点数字{today}，然后点确定按钮。"
+        f"注意：只有一个日期，没有起始和结束的范围，就是选单天。"
         f"导出后等待，然后去数据分析栏的导表中心，"
         f"找到最新的导出记录（检查时间是否是今天的），"
         f"确认状态为'已完成'后，点击下载该Excel文件"
