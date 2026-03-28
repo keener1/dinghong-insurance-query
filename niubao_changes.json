@@ -1,11 +1,16 @@
 {
-  "date": "2026-03-27",
-  "time": "2026-03-27 14:44",
-  "has_changes": false,
+  "date": "2026-03-28",
+  "time": "2026-03-28 10:25",
+  "has_changes": true,
   "delisted_count": 0,
-  "new_count": 0,
+  "new_count": 1,
   "fee_change_count": 0,
   "delisted": [],
-  "new_products": [],
+  "new_products": [
+    {
+      "name": "华贵大麦2026A款定期寿险(互联网专属)",
+      "type": "定期寿险"
+    }
+  ],
   "fee_changes": []
 }
