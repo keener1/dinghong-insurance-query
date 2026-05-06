@@ -1,25 +1,270 @@
 {
-  "date": "2026-04-30",
-  "time": "2026-04-30 10:04",
+  "date": "2026-05-06",
+  "time": "2026-05-06 09:42",
   "has_changes": true,
-  "delisted_count": 2,
+  "delisted_count": 3,
   "new_count": 1,
-  "fee_change_count": 0,
+  "fee_change_count": 30,
   "delisted": [
     {
-      "name": "人保境内出行保",
-      "type": "旅行险"
+      "name": "太平洋保险蓝医保·长期医疗险(好医好药0免赔)",
+      "type": "医疗"
     },
     {
-      "name": "人保安心保百万医疗险(免健告版)",
-      "type": "医疗"
+      "name": "中国大地财险掌心保学平险",
+      "type": "特色产品"
+    },
+    {
+      "name": "大家养老大锦之家(畅盈版)养老年金保险(分红型)",
+      "type": "养老"
     }
   ],
   "new_products": [
     {
-      "name": "招商仁和和享年年3.0(鑫享版)养老年金保险(分红型)",
-      "type": "养老"
+      "name": "众安保险众民保.中高端医疗险2026(上海个账版）",
+      "type": "医疗"
     }
   ],
-  "fee_changes": []
+  "fee_changes": [
+    {
+      "name": "中英人寿福相伴养老年金保险",
+      "type": "快返",
+      "old_fee": "53.30%",
+      "new_fee": "39.30%",
+      "old_fee_num": 53.3,
+      "new_fee_num": 39.3
+    },
+    {
+      "name": "瑞众大富翁(鑫瑞版)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "69.90%",
+      "new_fee": "57.90%",
+      "old_fee_num": 69.9,
+      "new_fee_num": 57.9
+    },
+    {
+      "name": "爱心人寿百岁人生5.0年金保险(乐享版)",
+      "type": "快返",
+      "old_fee": "18.60%",
+      "new_fee": "9.60%",
+      "old_fee_num": 18.6,
+      "new_fee_num": 9.6
+    },
+    {
+      "name": "爱心人寿百岁人生5.0年金保险(分红型)",
+      "type": "快返",
+      "old_fee": "18.80%",
+      "new_fee": "9.80%",
+      "old_fee_num": 18.8,
+      "new_fee_num": 9.8
+    },
+    {
+      "name": "爱心人寿映山红5.0(心喜版)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "48.80%",
+      "new_fee": "39.80%",
+      "old_fee_num": 48.8,
+      "new_fee_num": 39.8
+    },
+    {
+      "name": "爱心守护神5.0终身寿险(尊享版)",
+      "type": "增额",
+      "old_fee": "14.20%",
+      "new_fee": "5.20%",
+      "old_fee_num": 14.2,
+      "new_fee_num": 5.2
+    },
+    {
+      "name": "[个养版]中英人寿福临门两全保险(分红型)",
+      "type": "快返",
+      "old_fee": "78.80%",
+      "new_fee": "71.80%",
+      "old_fee_num": 78.8,
+      "new_fee_num": 71.8
+    },
+    {
+      "name": "[个养版]中英人寿福临门两全保险(分红型)",
+      "type": "养老",
+      "old_fee": "78.80%",
+      "new_fee": "71.80%",
+      "old_fee_num": 78.8,
+      "new_fee_num": 71.8
+    },
+    {
+      "name": "瑞众大富翁终身寿险(分红型，长盈版)",
+      "type": "增额",
+      "old_fee": "48.90%",
+      "new_fee": "41.90%",
+      "old_fee_num": 48.9,
+      "new_fee_num": 41.9
+    },
+    {
+      "name": "瑞众大富翁(国盛一号)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "33.30%",
+      "new_fee": "26.80%",
+      "old_fee_num": 33.3,
+      "new_fee_num": 26.8
+    },
+    {
+      "name": "海保人寿福享年年(星耀版)年金保险",
+      "type": "快返",
+      "old_fee": "9.50%",
+      "new_fee": "14.00%",
+      "old_fee_num": 9.5,
+      "new_fee_num": 14.0
+    },
+    {
+      "name": "中英人寿爱守护C款重大疾病保险",
+      "type": "重疾",
+      "old_fee": "116.20%",
+      "new_fee": "112.20%",
+      "old_fee_num": 116.2,
+      "new_fee_num": 112.2
+    },
+    {
+      "name": "中英人寿鑫盈家养老年金保险",
+      "type": "养老",
+      "old_fee": "37.50%",
+      "new_fee": "33.50%",
+      "old_fee_num": 37.5,
+      "new_fee_num": 33.5
+    },
+    {
+      "name": "中英人寿福满盈终身寿险C款(分红型)",
+      "type": "增额",
+      "old_fee": "72.80%",
+      "new_fee": "68.80%",
+      "old_fee_num": 72.8,
+      "new_fee_num": 68.8
+    },
+    {
+      "name": "中英人寿福满盈终身寿险C款(分红型)",
+      "type": "增额",
+      "old_fee": "72.80%",
+      "new_fee": "68.80%",
+      "old_fee_num": 72.8,
+      "new_fee_num": 68.8
+    },
+    {
+      "name": "中英人寿悦活人生年金保险C款(互联网)",
+      "type": "快返",
+      "old_fee": "37.70%",
+      "new_fee": "34.20%",
+      "old_fee_num": 37.7,
+      "new_fee_num": 34.2
+    },
+    {
+      "name": "复星联合保险超级玛丽重疾险(医联有盟版)",
+      "type": "重疾",
+      "old_fee": "141.60%",
+      "new_fee": "144.30%",
+      "old_fee_num": 141.6,
+      "new_fee_num": 144.3
+    },
+    {
+      "name": "海保人寿福瑞未来2026养老年金保险",
+      "type": "养老",
+      "old_fee": "63.50%",
+      "new_fee": "65.70%",
+      "old_fee_num": 63.5,
+      "new_fee_num": 65.7
+    },
+    {
+      "name": "中汇人寿汇精彩年金保险",
+      "type": "快返",
+      "old_fee": "29.90%",
+      "new_fee": "27.90%",
+      "old_fee_num": 29.9,
+      "new_fee_num": 27.9
+    },
+    {
+      "name": "太平洋保险福有余(2025)终身寿险(互联网)",
+      "type": "增额",
+      "old_fee": "29.00%",
+      "new_fee": "30.20%",
+      "old_fee_num": 29.0,
+      "new_fee_num": 30.2
+    },
+    {
+      "name": "复星保德信星颐朱雀版年金保险(分红型）",
+      "type": "快返",
+      "old_fee": "49.40%",
+      "new_fee": "50.40%",
+      "old_fee_num": 49.4,
+      "new_fee_num": 50.4
+    },
+    {
+      "name": "复星保德信星颐朱雀版年金保险(分红型)",
+      "type": "快返",
+      "old_fee": "49.40%",
+      "new_fee": "50.40%",
+      "old_fee_num": 49.4,
+      "new_fee_num": 50.4
+    },
+    {
+      "name": "[个养版]太保人寿蛮好的人生(2025)年金保险(互联网)",
+      "type": "快返",
+      "old_fee": "11.60%",
+      "new_fee": "12.20%",
+      "old_fee_num": 11.6,
+      "new_fee_num": 12.2
+    },
+    {
+      "name": "太保蛮好的人生(2025)年金保险(互联网)",
+      "type": "快返",
+      "old_fee": "15.60%",
+      "new_fee": "16.20%",
+      "old_fee_num": 15.6,
+      "new_fee_num": 16.2
+    },
+    {
+      "name": "华泰人寿华瑞金生(2025)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "69.39%",
+      "new_fee": "68.80%",
+      "old_fee_num": 69.39,
+      "new_fee_num": 68.8
+    },
+    {
+      "name": "华泰人寿华瑞金生(2025)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "69.39%",
+      "new_fee": "68.80%",
+      "old_fee_num": 69.39,
+      "new_fee_num": 68.8
+    },
+    {
+      "name": "[个养版]太保瑞有余(2025)年金保险(互联网)",
+      "type": "快返",
+      "old_fee": "12.30%",
+      "new_fee": "12.80%",
+      "old_fee_num": 12.3,
+      "new_fee_num": 12.8
+    },
+    {
+      "name": "太保瑞有余(2025)年金保险(互联网)",
+      "type": "快返",
+      "old_fee": "12.30%",
+      "new_fee": "12.80%",
+      "old_fee_num": 12.3,
+      "new_fee_num": 12.8
+    },
+    {
+      "name": "太保寿福有余(2025)终身寿险(分红型)",
+      "type": "增额",
+      "old_fee": "42.90%",
+      "new_fee": "43.40%",
+      "old_fee_num": 42.9,
+      "new_fee_num": 43.4
+    },
+    {
+      "name": "海保人寿增多多9号增额终身寿险",
+      "type": "增额",
+      "old_fee": "14.00%",
+      "new_fee": "14.10%",
+      "old_fee_num": 14.0,
+      "new_fee_num": 14.1
+    }
+  ]
 }
